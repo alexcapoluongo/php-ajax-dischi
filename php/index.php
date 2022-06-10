@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <?php include "../database.php"?>
-    
+    <?php include __DIR__ . "../database.php"?>
         <ul>
             <?php foreach($database as $album) {
                 echo '<div class="card">' . '<li>' . '<img src=' . $album['poster'] . '>' . '</li>';          
-                echo '<li>' . $album['title'] . '</li>';
+                echo '<li>' . '<h2>' . $album['title'] . '</h2>' . '</li>';
                 echo '<li>' . $album['author'] . '</li>';
                 echo '<li>' . $album['year'] . '</li>' . '</div>' . '<br>';
             }
