@@ -23,6 +23,16 @@
     <section class="ms_header">
         <img src="../img/logo.png" alt="">
     </section>
+    <section>
+        <select 
+            v-model="selectedGenre" @change="filterAlbums">
+            <option value="all">All</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="jazz">Jazz</option>
+            <option value="metal">Metal</option>
+        </select>
+    </section>
 </header>
 
 <ul>

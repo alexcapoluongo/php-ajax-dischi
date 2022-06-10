@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#root',
     data: {
         albums: [],
+        selectedGenre: "all",
     },
     created() {
         axios
@@ -9,5 +10,10 @@ const app = new Vue({
         .then((resp) => {
             this.albums = resp.data;
         })
+    },
+    methods: {
+        filterAlbums: function() {
+            
+        }
     }
 })
